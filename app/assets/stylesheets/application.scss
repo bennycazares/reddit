@@ -1,0 +1,24 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+.img-thumbnail{
+  height: 50px;
+}
+
+ol, li {
+   list-style: none
+ }
+
+h1{
+  background-color: #D1E4F6;
+  padding-left: 40px;
+}
+.container{
+  padding-bottom: 20px;
+}
+.submit {
+  text-align:center;
+}
+h2{
+  text-align: center;
+}

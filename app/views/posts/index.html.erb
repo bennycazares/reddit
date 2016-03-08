@@ -1,0 +1,39 @@
+
+<div class=""><% link_to root_path %>
+<h1> <i class="fa fa-reddit"></i> reddit</h1>
+
+</div>
+<div class="submit">
+<%= link_to new_post_path, class: 'btn btn-default' do %>
+  <caption>Submit your Post </caption>
+<% end %>
+</div>
+<br>
+
+<ol>
+  <% @posts.each do |post| %>
+
+    <li class="container">
+      <!-- <div class="submission-box"> -->
+        <div class="container">
+          <%= link_to upvote_post_path(id: post.id), method: :post do %>
+              <% image_tag 'upvote.png', class: "img-thumbnail" %>
+          <% end %>
+          <%= link_to downvote_post_path(id: post.id), method: :post do %>
+          <% image_tag 'downvote.png', class: "img-thumbnail" %>
+          <% end %>
+          <p>
+            <%= post.vote_count %> Votes
+          </p>
+            <%= link_to details_post_path(id: post.id), method: :post do %>
+            <%= post.title %>
+            <% end %>
+          </div>
+      <!-- </div> -->
+    </li>
+  <% end %>
+
+
+
+</ol>
+</div>
