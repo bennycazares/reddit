@@ -5,7 +5,7 @@ ruby '2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -37,9 +37,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 #   gem 'byebug'
 # end
-group :development, :test do # <<<< :development, not devlopment
-  gem 'sqlite3'
-end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -53,3 +50,4 @@ gem 'bootstrap-sass'
 group :production do
   gem 'rails_12factor'
 end
+gem 'pg'
